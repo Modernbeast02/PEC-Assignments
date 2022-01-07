@@ -44,11 +44,12 @@ print("Sorted Order Of Marks : ", Marks)
 
 # # Ques 5
 Color = ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
-List_for_partA = Color
-List_for_partA.remove('Black')
-print("Part a :", List_for_partA)
+Color.remove('Black')
+print("Part a :", Color)
+Color = ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
 Color[3:5] = ['Purple']  # Replacing Black and Pink with Purple
 print("Part b :", Color)
+
 
 # -----------------------------------------------------------------------------------------
 

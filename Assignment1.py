@@ -32,7 +32,7 @@ Student_Details.append(CGPA)
 print("Student Details :", Student_Details)
 
 
-# # Ques4
+# Ques4
 Marks = []
 for i in range(5):
     print("Enter Marks", i + 1, ": ", end="")
@@ -42,7 +42,7 @@ Marks.sort()  # Sorting the marks list
 print("Sorted Order Of Marks : ", Marks)
 
 
-# # Ques 5
+# Ques 5
 Color = ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
 Color.remove('Black')
 print("Part a :", Color)

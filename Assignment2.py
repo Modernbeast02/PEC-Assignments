@@ -5,7 +5,7 @@ string = string[::-1]  # reverse the string
 
 # Ques2
 
-Name = str("Ankur")
+Name = str("ABC")
 SID = 21103028
 CGPA = 9.9
 Department = str("CSE")

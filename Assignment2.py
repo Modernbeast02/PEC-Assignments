@@ -1,60 +1,66 @@
+
+
+# Ques1
 string = str("Python is a case sensitive language")
-print(len(string))
+s = string
+print("Length of original string is", len(string))
 string = string[::-1]  # reverse the string
+print("Reversed string --", string)
+new_string = s[10:26]
+new_string.replace("a case sensitive", "object oriented")
+print("Index of 'a' in original string is", s.find('a'))
+print("Original String after removing whitespace --", s.replace(" ", ""))
 
 
 # Ques2
-
-Name = str("ABC")
+Name = "Ankur Gupta"
 SID = 21103028
-CGPA = 9.9
-Department = str("CSE")
-print("Hey,", Name, "Here!")
-print("My SID is", SID)
-print("I am from", Department, "and my CGPA is ", CGPA)
+CGPA = 10
+Department = "CSE"
+print("Hey, %s Here!" % Name)
+print("My SID is %d" % SID)
+print("I am from %s and my CGPA is %d" % (Department, CGPA))
+
 
 # Ques 3
-
 a = 56
 b = 10
 print(a & b)
 print(a | b)
 print(a ^ b)
 # D part
-a = a << 2
-b = b << 2
+print(a << 2)
+print(b << 2)
 # E part
-a = a >> 2
-b = b >> 4
+print(a >> 2)
+print(b >> 4)
+
 
 # Ques 4
 list = []
 for i in range(3):
-    x = int(input())
+    x = int(input("Enter the number: "))
     list.append(x)
-list.sort()       #largest number will reach the last index of list
-print(list[-1])
+list.sort()
+# the last index will contain the maximum value
+print("Max number is", list[-1])
+
 
 # Ques 5
-
-string = str(input())
-flag = False
-for i in range(len(string) - 3):
-    if(string[i: i + 4] == "name"):  #checking every substring of size 4
-        flag = True
-if (flag == True):
-    print("YES")
+string = str(input("Enter the string: "))
+if("name" in string):
+    print("Yes\n")
 else:
-    print("NO\n")
+    print("No\n")
+
 
 # Ques 6
-
 list = []
 for i in range(3):
-    x = int(input())
+    x = int(input("Enter Triangle Side Length: "))
     list.append(x)
-list.sort()   #sorting the list
-if(list[0] + list[1] < list[2]):  #if 2 small numbers sum is greater than largest side sum, then we can form triangle
-    print("NO\n")
+list.sort()
+if(list[0] + list[1] < list[2]):
+    print("No\n")
 else:
-    print("YES\n")
+    print("Yes\n")

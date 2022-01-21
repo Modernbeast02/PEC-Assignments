@@ -57,8 +57,8 @@ else:
 # Ques 6
 list = []
 for i in range(3):
-    x = int(input("Enter Triangle Side Length: "))
-    list.append(x)
+    x = float(input("Enter Triangle Side Length: "))
+    list.append(int(x))
 list.sort()
 if(list[0] + list[1] < list[2]):
     print("No\n")

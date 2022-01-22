@@ -60,7 +60,7 @@ for i in range(3):
     x = float(input("Enter Triangle Side Length: "))
     list.append(int(x)) # To append the integer value of the side length
 list.sort()
-if(list[0] + list[1] <= list[2]):  # if the least 2 integers sum is less than the largest number, then no triangle will be formed
-    print("No\n")
-else:
+if(list[0] + list[1] > list[2] and list[0] > 0):  # if the least 2 integers sum is less than the largest number, then no triangle will be formed
     print("Yes\n")
+else:
+    print("No\n")

@@ -37,14 +37,16 @@ print(b >> 4)
 
 
 # Ques 4
-list = []
-for i in range(3):
-    x = int(input("Enter the number: "))
-    list.append(x)
-list.sort()
-# the last index will contain the maximum value
-print("Max number is", list[-1])
 
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+c = int(input("Enter third number: "))
+if a >= b and a >= c:
+    print("Max number is ", a)
+elif b >= a and b >= c:
+    print("Max number is ", b)
+elif c >= b and c >= a:
+    print("Max number is ", c)
 
 # Ques 5
 string = str(input("Enter the string: "))

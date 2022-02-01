@@ -126,7 +126,7 @@ sid = int(input("Enter SID to search: "))
 print("Part d ", dict[sid])
 
 # Ques 7
-n = int(input("Enter number for fibonacci"))
+n = int(input("Enter number for fibonacci: "))
 prev = 0
 curr = 1
 sum = 0

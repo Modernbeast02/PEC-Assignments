@@ -33,7 +33,7 @@ Date = int(input("Enter the date: "))
 Month = int(input("Enter the month: "))
 Year = int(input("Enter the year: "))
 Extra_Day_Months = [1, 3, 5, 7, 8, 10, 12]
-if(Date < 28 or Date == 29):
+if(Date < 28 or (Date == 29 and Month != 2)):
     print("Next Date is:", Date + 1, "/", Month, "/", Year)
 elif Date == 28:
     if Month != 2:
@@ -43,6 +43,8 @@ elif Date == 28:
             print("Next Date is:", Date + 1, "/", Month, "/", Year)
         else:
             print("Next Date is:", 1, "/", "03", "/", Year)
+elif Date == 29:
+    print("Next Date is:", 1, "/", Month + 1, "/", Year)
 else:
     if Date == 31:
         if(Month == 12):

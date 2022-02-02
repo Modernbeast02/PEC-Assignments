@@ -59,7 +59,7 @@ average is : 1.4
   
 Ques 8
 
-Part a {1, 3, 5}
+Part a {1, 3, 5, 6, 8}
 Part b {3, 6, 8, 9, 13, 17}
 Part c {1, 2, 4, 5}
 part d {6, 7, 8, 9, 10}

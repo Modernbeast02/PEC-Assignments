@@ -150,11 +150,10 @@ Set1 = {1, 2, 3, 4, 5}
 Set2 = {2, 4, 6, 8}
 Set3 = {1, 5, 9, 13, 17}
 # Part A
-Set_Union = Set1
-Set_Union.union(Set2)
+Set_Union = Set1.union(Set2)
 Set_Intersection = Set1.intersection(Set2)
 Set_Union = Set_Union - Set_Intersection
-print("Part A", Set_Union)
+print("Part a", Set_Union)
 
 # Part B
 Part_B_Set = Set1.union(Set2.union(Set3)) - Set1.intersection(Set2) - \

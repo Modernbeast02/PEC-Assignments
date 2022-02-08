@@ -32,7 +32,10 @@ def Check_If_Leap_Year(Year):  # To check if the year is a leap year
 Date = int(input("Enter the date: "))
 Month = int(input("Enter the month: "))
 Year = int(input("Enter the year: "))
-Extra_Day_Months = [1, 3, 5, 7, 8, 10, 12]
+if(Date < 1 or Date > 31 or Month < 1 or Month > 12 or Year < 1800 or Year > 2025):
+    print("Error")
+    exit()
+Extra_Day_Months = [1, 3, 5, 7, 8, 10, 12]  # Months which have 31 days
 if(Date < 28 or (Date == 29 and Month != 2)):
     print("Next Date is:", Date + 1, "/", Month, "/", Year)
 elif Date == 28:
@@ -43,19 +46,25 @@ elif Date == 28:
             print("Next Date is:", Date + 1, "/", Month, "/", Year)
         else:
             print("Next Date is:", 1, "/", "03", "/", Year)
-elif Date == 29:
-    print("Next Date is:", 1, "/", Month + 1, "/", Year)
-else:
-    if Date == 31:
-        if(Month == 12):
-            print("Next Date is:", 1, "/", "01", "/", Year + 1)
+elif Date == 29:  # This means month is February and date is 29
+    if Check_If_Leap_Year(Year) == False: # Date cannot be 29 in Feb if it isn't a leap year
+        print("Error")
+    else:
+        print("Next Date is:", 1, "/", Month + 1, "/", Year)
+elif Date == 30:
+    if Month in Extra_Day_Months:
+        print("Next Date is:", Date + 1, "/", Month, "/", Year)
+    else:
+        print("Next Date is:", 1, "/", Month + 1, "/", Year)
+else:  # Date is 31
+    if Month in Extra_Day_Months:
+        if Month == 12:
+            print("Next Date is:", 1, "/", 1, "/", Year + 1)
         else:
             print("Next Date is:", 1, "/", Month + 1, "/", Year)
     else:
-        if Month in Extra_Day_Months:
-            print("Next Date is:", Date + 1, "/", Month, "/", Year)
-        else:
-            print("Next Date is:", 1, "/", Month + 1, "/", Year)
+        print("Error")
+
 
 # Ques 3
 n = int(input("Enter total numbers to be added to list: "))

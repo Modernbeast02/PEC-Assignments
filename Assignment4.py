@@ -125,14 +125,17 @@ def make_list(s):
         li.append(s[i])
     li.sort()
     return li
-    
+
 s = str(input())
 s = s.lower()  # So that we convert the name to lowercase letters
 y = str(input())
 y = y.lower()  # So that we convert the name to lowercase letters
+print("George's word:", s)
+print("Barbie's word:", y)
 s = make_list(s)
 y = make_list(y)
 if s == y:
-    print("Nice")
+    print("Friendship is Nice")
 else:
-    print("Fake")
+    print("Fake Friendship")
+

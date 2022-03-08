@@ -264,6 +264,12 @@ def quickSort(arr, low, high):
         pi = partition(arr, low, high)
         quickSort(arr, low, pi - 1)
         quickSort(arr, pi + 1, high)
+        
+n = int(input())
+li = list(map(int, input().strip().split()))
+quickSort(li, 0, n - 1)
+print("Sorted array is: ", li)
+
 
 # Ques 5
 n = int(input())
